@@ -1,0 +1,60 @@
+{
+  "name": "codestravaganza-ui",
+  "version": "1.0.0",
+  "description": "ui for consuming receipts and itemizing them by week",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dashboard -- webpack-dev-server --hot --inline --debug --devtool eval --open --colors --no-info",
+    "build": "webpack-dashboard -- webpack --config webpack.config.production.js --optimize-minimize --progress"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/byra/Codestravaganza-UI.git"
+  },
+  "keywords": [
+    "ReactJS"
+  ],
+  "author": "Manikanta Mahesh Byra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/byra/Codestravaganza-UI/issues"
+  },
+  "homepage": "https://github.com/byra/Codestravaganza-UI#readme",
+  "dependencies": {
+    "@material-ui/core": "^1.0.0",
+    "ajv": "^6.5.0",
+    "bootstrap": "^4.1.1",
+    "cross-fetch": "^2.2.0",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.3",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0",
+    "redux-form": "^7.3.0",
+    "redux-logger": "^3.0.6",
+    "redux-promise-middleware": "^5.1.1",
+    "uuid": "^3.2.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-minify-webpack-plugin": "^0.3.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.11",
+    "duplicate-package-checker-webpack-plugin": "^2.1.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.11",
+    "friendly-errors-webpack-plugin": "^1.7.0",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.0.1",
+    "style-loader": "^0.21.0",
+    "uglifyjs-webpack-plugin": "^1.2.5",
+    "webpack": "^3.12.0",
+    "webpack-bundle-analyzer": "^2.12.0",
+    "webpack-dashboard": "^1.1.1",
+    "webpack-dev-server": "^2.11.2"
+  }
+}
