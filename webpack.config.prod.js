@@ -1,5 +1,8 @@
 const path = require("path");
 const ASSET_PATH = process.env.ASSET_PATH || "/";
+const APP_DIR = path.resolve(__dirname, './src');
+const BUILD_DIR = path.resolve(__dirname, './build');
+
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const webpackDashboardPlugin = require('webpack-dashboard/plugin');
@@ -12,11 +15,11 @@ const MinifyPlugin = require("babel-minify-webpack-plugin");
 module.exports = {
 
     entry: {
-        main: "./src"
+        main: APP_DIR
     },
 
     output: {
-        path: path.join(__dirname, "build"),
+        path: BUILD_DIR,
         publicPath: ASSET_PATH,
         filename: "bundle.js"
     },
@@ -24,8 +27,7 @@ module.exports = {
     module: {
         rules: [
             {test: /\.jsx?$/, exclude: /node_modules/, use: [{loader: "babel-loader", options: {presets: ["env", "react"]}}]},
-            {test: /\.scss$/, use:[{loader: "style-loader"}, {loader: "css-loader", options: {sourceMap: true}}, {loader: "sass-loader", options: {sourceMap: true}}]},
-            {test: /\.css$/, use:[{loader: "style-loader"}, {loader: "css-loader"}]},
+            {test: /\.(css|scss)$/, use:[{loader: "style-loader"}, {loader: "css-loader", options: {sourceMap: true}}, {loader: "sass-loader", options: {sourceMap: true}}]},
             {test: /\.(png|jpg|gif|svg)$/, use: [{loader: "file-loader"}]}
         ]
     },
