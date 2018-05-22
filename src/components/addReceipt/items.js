@@ -10,7 +10,6 @@ import {newItem} from "../../actions/addReceipt";
 class Items extends Component {
     constructor(props) {
         super(props);
-        this.state = {itemKeys: []};
     };
 
     render() {
@@ -19,7 +18,7 @@ class Items extends Component {
                 <Item/>
                 <AddItems itemKeys={this.props.itemKeys}/>
                 <div className="form-group col-12  d-flex justify-content-center">
-                    <button className="btn btn-dark" type="button" onClick={this.props.addNewItem()}>Add an Item</button>
+                    <button className="btn btn-dark" type="button" onClick={()=>this.props.addNewItem()}>Add an Item</button>
                 </div>
             </Fragment>
         );
@@ -28,7 +27,7 @@ class Items extends Component {
 
 const mapStateToProps = (state) =>{
     return{
-        itemKeys:state.itemKeys
+        itemKeys:state.receipts.itemKeys
     };
 };
 

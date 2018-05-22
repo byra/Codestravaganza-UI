@@ -14,7 +14,7 @@ class AddItems extends Component{
                 this.props.itemKeys.map((identifier)=>(
                     <Fragment key={identifier}>
                         <Item/>
-                        <RemoveButton/>
+                        <RemoveButton identifier ={identifier}/>
                     </Fragment>
 
                 ))
