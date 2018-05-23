@@ -3,7 +3,7 @@ import {Component, Fragment} from "react";
 import {connect} from "react-redux";
 
 import Item from "./item";
-import {removeItem} from "../../actions/addReceipt";
+import {newItem, removeItem} from "../../actions/addReceipt";
 
 class MoreItems extends Component{
     constructor(props){
@@ -13,18 +13,30 @@ class MoreItems extends Component{
     render(){
         if(this.props.itemKeys){
             return(
-                this.props.itemKeys.map((identifier)=>(
-                    <Fragment key={identifier}>
-                        <Item/>
-                        <div className="form-group col-12  d-flex justify-content-end text-hide">
-                            <button type="button" className="btn btn-dark" onClick={()=>this.props.removeItem(identifier)}>Remove</button>
-                        </div>
-                    </Fragment>
-                ))
+                <Fragment>
+                    {
+                        this.props.itemKeys.map((identifier)=>(
+                            <Fragment key={identifier}>
+                                <Item/>
+                                <div className="form-group col-12  d-flex justify-content-end text-hide">
+                                    <button type="button" className="btn btn-dark" onClick={()=>this.props.removeItem(identifier)}>Remove</button>
+                                </div>
+                            </Fragment>
+                        ))
+                    }
+                    <div className="form-group col-12  d-flex justify-content-center">
+                        <button className="btn btn-dark" type="button" onClick={()=>this.props.addNewItem()}>Add an Item</button>
+                    </div>
+                </Fragment>
+
             );
         }
         else {
-            return(null)
+            return(
+                <div className="form-group col-12  d-flex justify-content-center">
+                    <button className="btn btn-dark" type="button" onClick={()=>this.props.addNewItem()}>Add an Item</button>
+                </div>
+            )
         }
     }
 
@@ -38,6 +50,7 @@ const mapStateToProps = (state) =>{
 
 const mapDispatchToProps = (dispatch) =>{
     return{
+        addNewItem:() => dispatch(newItem()),
         removeItem:(identifier) => dispatch(removeItem(identifier))
     };
 };

@@ -10,7 +10,7 @@ export const receipts = (state = {}, action) =>{
 
         case "addNewItem":
             if(state.itemKeys) {
-                tempItemKeys = state.itemKeys;
+                tempItemKeys = [...state.itemKeys];
             }
             else {
                 tempItemKeys = [];
@@ -22,7 +22,7 @@ export const receipts = (state = {}, action) =>{
 
         case "removeItem":
             toBeRemovedItem = action.payload;
-            tempItemKeys = state.itemKeys;
+            tempItemKeys = [...state.itemKeys];
             tempState = Object.assign({}, state);
             tempItemKeys.splice(tempItemKeys.indexOf(toBeRemovedItem), 1);
             tempState.itemKeys = tempItemKeys;
