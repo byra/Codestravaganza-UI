@@ -7,7 +7,7 @@ import Contact from "./contact";
 import AddReceipt from "../addReceipt";
 import ViewList from "../viewList";
 
-export default (props) => (
+export default () => (
     <Fragment>
         <Header/>
         <Home/>
