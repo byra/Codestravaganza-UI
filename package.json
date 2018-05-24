@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dashboard -- webpack-dev-server --hot --inline --debug --devtool eval --open --colors --no-info",
-    "build": "webpack-dashboard -- webpack --config webpack.config.production.js --optimize-minimize --progress"
+    "build": "webpack-dashboard -- webpack --config webpack.config.prod.js --optimize-minimize --progress"
   },
   "repository": {
     "type": "git",
@@ -13,7 +13,6 @@
   },
   "keywords": [
     "ReactJS",
-    "Material-UI",
     "Redux-Forms"
   ],
   "author": "Manikanta Mahesh Byra",

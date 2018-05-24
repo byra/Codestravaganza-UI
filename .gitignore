@@ -63,3 +63,5 @@ typings/
 # custom files and folders
 .idea/
 package-lock.json
+build/
+.DS_Store

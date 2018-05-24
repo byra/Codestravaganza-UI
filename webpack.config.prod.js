@@ -1,5 +1,4 @@
 const path = require("path");
-const ASSET_PATH = process.env.ASSET_PATH || "/";
 const APP_DIR = path.resolve(__dirname, './src');
 const BUILD_DIR = path.resolve(__dirname, './build');
 
@@ -20,7 +19,6 @@ module.exports = {
 
     output: {
         path: BUILD_DIR,
-        publicPath: ASSET_PATH,
         filename: "bundle.js"
     },
 
@@ -40,6 +38,6 @@ module.exports = {
         new HtmlWebpackPlugin({filename:"index.html", template:"./src/assets/index.html"}),
         new ExtractTextPlugin("style.css"),
         new UglifyJsPlugin(),
-        new MinifyPlugin(minifyOpts, pluginOpts)
+        new MinifyPlugin()
     ]
 };
