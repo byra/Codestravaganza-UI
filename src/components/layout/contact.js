@@ -1,5 +1,5 @@
 import React from "react";
-import { SocialIcon } from 'react-social-icons';
+import { SocialIcon } from "react-social-icons";
 
 export default ()=>(
     <div className="container-fluid padding bg-dark p-4" id="contact">

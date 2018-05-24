@@ -1,6 +1,6 @@
-import './jquery';
-import './tether';
-import './popper';
+import "./jquery";
+import "./tether";
+import "./popper";
 
-import 'bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";

@@ -1,13 +1,9 @@
-export const newItem = () =>{
+export const addNewReceipt = (values) =>{
+    //api call
+    console.log(values);
+    console.log("hey");
     return{
-        type:"addNewItem",
+        type:"addNewReceipt",
         payload:null
-    };
-};
-
-export const removeItem = (identifier) =>{
-    return{
-        type:"removeItem",
-        payload:identifier
     };
 };

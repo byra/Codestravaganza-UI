@@ -1,4 +1,4 @@
-import {v4} from "uuid";
+import v4 from "uuid";
 
 export const receipts = (state = {}, action) =>{
     let itemKeys = null;

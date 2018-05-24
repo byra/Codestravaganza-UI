@@ -1,6 +1,6 @@
 import React from "react";
 
-import BW from "../../assets/images/batman.jpg"
+import BW from "../../assets/images/batman.jpg";
 
 export default () =>(
     <div className="p-4 bg-secondary" id="team">

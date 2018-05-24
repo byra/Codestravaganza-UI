@@ -1,12 +1,14 @@
 import React from "react";
 import {Fragment} from "react";
 
-import SelectDates from "./selectDates";
+import Title from "./title";
+import Test from "./test";
 import ResultList from "./resultList";
 
 export default () =>(
     <Fragment>
-        <SelectDates/>
+        <Title/>
+        <Test/>
         <ResultList/>
     </Fragment>
 );

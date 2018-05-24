@@ -1,10 +1,10 @@
 import React from "react";
 
-import "../../styles/_common.scss"
+import "../../styles/_common.scss";
 
-import img1 from "../../assets/images/bg1.jpg"
-import img2 from "../../assets/images/bg2.jpg"
-import img3 from "../../assets/images/bg3.jpg"
+import img1 from "../../assets/images/bg1.jpg";
+import img2 from "../../assets/images/bg2.jpg";
+import img3 from "../../assets/images/bg3.jpg";
 
 export default () => (
     <div id="home" className="carousel slide" data-ride="carousel">

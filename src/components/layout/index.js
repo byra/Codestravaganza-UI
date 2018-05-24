@@ -1,4 +1,5 @@
-import React, {Fragment} from "react";
+import React from "react";
+import {Fragment} from "react";
 
 import Header from "./header";
 import Home from "./home";
@@ -16,4 +17,4 @@ export default () => (
         <Team/>
         <Contact/>
     </Fragment>
-)
+);

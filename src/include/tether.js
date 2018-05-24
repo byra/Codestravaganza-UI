@@ -1,3 +1,3 @@
-import Tether from 'tether';
+import Tether from "tether";
 
 window.Tether = Tether;
