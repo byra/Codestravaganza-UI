@@ -1,30 +1,23 @@
-import fetch from "cross-fetch";
+import axios from "axios";
 
 import {baseAPIURL} from "../configurations/essentials";
 
-export const addNewReceipt = (values) =>{
+export const addNewReceipt = (values) => {
     return dispatch => {
-        fetch(baseAPIURL+"/addReceipts?q="+values, {
-            method: "GET"})
-            .then(function (res) {
-                if (res.status >= 400) {
-                    throw new Error("Bad response from server");
-                }
-                return res.json();
-            })
-            .then(response => {
-                dispatch(receivedData(response))
-            })
-            .catch(function (err) {
-
+        axios.post(baseAPIURL + "/receipt/addReceipts", {
+            receipt: values
+        }).then(function (response) {
+            dispatch(receivedData(response))
+        }).catch(function (error) {
+                console.log(error);
             });
     };
 
 };
 
 const receivedData = (response) => {
-    return{
-        type:"addNewReceipt",
-        payload:null
+    return {
+        type: "addNewReceipt",
+        payload: null
     };
 };

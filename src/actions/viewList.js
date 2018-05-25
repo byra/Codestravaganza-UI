@@ -1,22 +1,17 @@
-import fetch from "cross-fetch";
+import axios from "axios";
 
 import {baseAPIURL} from "../configurations/essentials";
 
 export const viewList = (values) => {
     return dispatch => {
-        fetch(baseAPIURL+"getItemsList?q="+values, {
-                method: 'GET'})
-            .then(function (res) {
-            if (res.status >= 400) {
-                throw new Error("Bad response from server");
+        axios.get(baseAPIURL + "/receipt/getItemsList", {
+            params: {
+                duration: values
             }
-            return res.json();
-            })
-            .then(response => {
-                dispatch(receivedData(response))
-            })
-            .catch(function (err) {
-
+        }).then(function (response) {
+            dispatch(receivedData(response))
+        }).catch(function (error) {
+                console.log(error);
             });
     };
 };

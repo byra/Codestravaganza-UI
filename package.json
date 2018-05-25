@@ -23,8 +23,8 @@
   "homepage": "https://github.com/byra/Codestravaganza-UI#readme",
   "dependencies": {
     "ajv": "^6.5.0",
+    "axios": "^0.18.0",
     "bootstrap": "^4.1.1",
-    "cross-fetch": "^2.2.0",
     "jquery": "^3.3.1",
     "popper.js": "^1.14.3",
     "react": "^16.3.2",
