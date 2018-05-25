@@ -7,6 +7,7 @@ export const addNewReceipt = (values) => {
         axios.post(baseAPIURL + "/receipt/addReceipts", {
             receipt: values
         }).then(function (response) {
+            dispatch(clearReceiptForm());
             dispatch(receivedData(response))
         }).catch(function (error) {
                 console.log(error);
@@ -15,9 +16,16 @@ export const addNewReceipt = (values) => {
 
 };
 
-const receivedData = (response) => {
+export const clearReceiptForm = () => {
     return {
-        type: "addNewReceipt",
+        type: "clearReceiptForm",
         payload: null
+    };
+};
+
+export const receivedData = (response) => {
+    return {
+        type: "status",
+        payload: response.data.message
     };
 };

@@ -10,16 +10,31 @@ export const viewList = (values) => {
                 toDate:values.toDate
             }
         }).then(function (response) {
-            dispatch(receivedData(response))
+            dispatch(clearViewListForm());
+            dispatch(receivedData(response));
         }).catch(function (error) {
                 console.log(error);
             });
     };
 };
 
-const receivedData = (response) => {
+export const clearViewListForm = () => {
+    return {
+        type: "clearViewListForm",
+        payload: null
+    };
+};
+
+export const receivedData = (response) => {
     return {
         type: "viewList",
-        payload: response
+        payload: response.data
+    };
+};
+
+export  const clear =()=>{
+    return {
+        type:"clear",
+        payload:null
     };
 };

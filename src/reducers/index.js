@@ -1,15 +1,19 @@
 import {combineReducers} from "redux";
 import { reducer as formReducer } from 'redux-form'
 
-import {addNewReceipt} from '../actions/addReceipt';
-import {viewList} from "../actions/viewList";
+import {receipts} from "./addReceipt";
+import {list} from "./viewList";
+
+import {clearReceiptForm} from '../actions/addReceipt';
+import {clearViewListForm} from "../actions/viewList";
 
 const reducers = combineReducers({
-
+    receipts:receipts,
+    list:list,
     form: formReducer.plugin({
         receipt: (state, action) => {
             switch(action.type) {
-                case "addNewReceipt":
+                case "clearReceiptForm":
                     return undefined;
                 default:
                     return state;
@@ -17,7 +21,7 @@ const reducers = combineReducers({
         },
         receiptDates:(state, action) => {
             switch(action.type) {
-                case "viewList":
+                case "clearViewListForm":
                     return undefined;
                 default:
                     return state;

@@ -3,12 +3,12 @@ import {Fragment} from "react";
 
 import Title from "./title";
 import SelectPage from "./selectPage";
-import ResultList from "./resultList";
+import ItemizedList from "./itemizedList";
 
 export default () =>(
     <Fragment>
         <Title/>
         <SelectPage/>
-        <ResultList/>
+        <ItemizedList/>
     </Fragment>
 );
