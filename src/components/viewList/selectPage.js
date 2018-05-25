@@ -4,7 +4,7 @@ import {connect} from "react-redux";
 import SelectDates from "./selectDates";
 import {viewList} from "../../actions/viewList";
 
-class Test extends React.Component {
+class SelectPage extends React.Component {
     constructor(props){
         super(props);
         this.submit = this.submit.bind (this);
@@ -33,4 +33,4 @@ const mapDispatchToProps = (dispatch) =>{
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Test);
+export default connect(mapStateToProps, mapDispatchToProps)(SelectPage);

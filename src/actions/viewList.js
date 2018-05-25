@@ -6,7 +6,8 @@ export const viewList = (values) => {
     return dispatch => {
         axios.get(baseAPIURL + "/receipt/getItemsList", {
             params: {
-                duration: values
+                fromDate: values.fromDate,
+                toDate:values.toDate
             }
         }).then(function (response) {
             dispatch(receivedData(response))

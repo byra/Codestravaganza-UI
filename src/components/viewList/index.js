@@ -2,13 +2,13 @@ import React from "react";
 import {Fragment} from "react";
 
 import Title from "./title";
-import Test from "./test";
+import SelectPage from "./selectPage";
 import ResultList from "./resultList";
 
 export default () =>(
     <Fragment>
         <Title/>
-        <Test/>
+        <SelectPage/>
         <ResultList/>
     </Fragment>
 );
