@@ -1,7 +1,9 @@
 version: '3'
 
 services:
-  web:
+  ui:
+    container_name: ui
+    hostname: ui.byra.com
     build: .
     volumes:
       - ./build/:/usr/share/nginx/html/
