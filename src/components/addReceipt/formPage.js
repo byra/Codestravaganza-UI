@@ -4,7 +4,7 @@ import {connect} from "react-redux";
 import Receipt from "./receipt";
 import {addNewReceipt} from "../../actions/addReceipt";
 
-class ContactPage extends React.Component {
+class ReceiptPage extends React.Component {
     constructor(props){
         super(props);
         this.submit = this.submit.bind(this);
@@ -40,4 +40,4 @@ const mapDispatchToProps = (dispatch) =>{
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(ContactPage);
+export default connect(mapStateToProps, mapDispatchToProps)(ReceiptPage);
