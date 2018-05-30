@@ -15,13 +15,13 @@ export default () =>(
         </div>
 
         <div className="container-fluid padding">
-            <div className="row padding">
+            <div className="row padding card-deck">
                 <div className="col-md-4 p-lg-5 p-5 p-sm-5">
                     <div className="card">
                         <img className="card-img-top" src={BW}/>
                         <div className="card-body">
                             <h4 className="card-title">Manikanta</h4>
-                            <p className="card-text">Manikanta is an excellent UI Developer</p>
+                            <p className="card-text">Manikanta is an excellent Frontend Developer</p>
                             <a href="#" className="btn btn-outline-secondary">See Profile</a>
                         </div>
                     </div>

@@ -11,7 +11,6 @@ class ItemizedList extends Component {
 
     render() {
         if (this.props.itemizedList) {
-            console.log(typeof(this.props.itemizedList));
             return (
                 <div className="container-fluid padding">
                     <div className="row text-center">

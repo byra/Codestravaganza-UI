@@ -1,10 +1,14 @@
 export const list = (state = {}, action)=>{
+    let temp = null;
     switch(action.type) {
+
         case "viewList":
-            return Object.assign({itemizedList:action.payload}, state);
+            temp = Object.assign({}, state);
+            temp.itemizedList= action.payload;
+            return temp;
 
         case "clear":
-            let temp = Object.assign({}, state);
+            temp = Object.assign({}, state);
             temp.itemizedList=null;
             return temp;
 
